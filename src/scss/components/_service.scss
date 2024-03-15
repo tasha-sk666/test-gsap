@@ -1,0 +1,140 @@
+.service {
+  --gap: 15px;
+  --elements: 4;
+  --width: calc((100% / var(--elements)) - var(--gap));
+
+  padding-top: 62px;
+  padding-bottom: 352px;
+
+  &__title {
+    margin-bottom: 90px;
+  }
+
+  &__wrapper {
+    @include tablet {
+      padding-right: 0;
+      padding-left: max(var(--container-offset), (100% - var(--content-width)) / 2);
+      max-width: unset;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
+
+    @include tablet {
+      flex-wrap: nowrap;
+      justify-content: unset;
+      gap: unset;
+    }
+  }
+
+  .swiper-slide {
+    width: var(--width);
+
+    @include tablet {
+      width: 380px;
+      max-width: 380px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--light-color);
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: var(--sub-font);
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: 38px;
+    width: 100%;
+    height: 360px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__decor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    width: 56px;
+    height: 56px;
+
+    .border {
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+      stroke: var(--light-color);
+    }
+
+    .arrow {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 19px;
+      height: 17px;
+      fill: var(--light-color);
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+// .container {
+// }
+// .title {
+//   &__accent {
+//   }
+// }
+// .title--center {
+// }
+
+// .service-swiper {
+// }
+
+// .swiper-slide {
+// }
+// .border {
+// }
+// .arrow {
+// }

@@ -1,0 +1,19 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "keyframes";
+
+// подключения компонентов страницы
+@import "./components/accent-typography";
+@import "./components/small-components";
+@import "./components/burger";
+@import "./components/nav";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/gallery";
+@import "./components/about";
+@import "./components/project";
+@import "./components/service";
+@import "./components/footer";

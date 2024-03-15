@@ -1,0 +1,21 @@
+.header {
+  padding-top: 15px;
+  background-color: var(--dark-color);
+  opacity: 0;
+  transition: opacity 0.3s 0.2s ease-in-out;
+
+  .page-loaded & {
+    opacity: 1;
+  }
+
+  &__container {
+    @include flex-v-center;
+
+    border-bottom: 1px solid var(--light-color);
+    padding-bottom: 15px;
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+}

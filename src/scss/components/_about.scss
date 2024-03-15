@@ -1,0 +1,114 @@
+.about {
+  position: relative;
+  padding-top: 147px;
+  padding-bottom: 160px;
+
+  &::before,
+  &::after {
+    @include bg-cover;
+
+    content: "";
+    position: absolute;
+    z-index: 20;
+    width: 500px;
+    height: 500px;
+  }
+
+  &::before {
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/bg-circle.png");
+    animation: float 7s ease-in-out infinite;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    background-image: url("../img/bg-circle.png");
+    animation: float 6s ease-in-out infinite;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    max-width: 561px;
+  }
+
+  &__text {
+    color: var(--light-color);
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__sub-text {
+    margin: 0;
+    font-family: var(--sub-font);
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    color: var(--light-color);
+  }
+}
+
+.about__wrapper {
+  display: flex;
+}
+
+.left {
+  width: 50%;
+}
+
+.detailsWrapper {
+  margin: auto;
+  width: 80%;
+}
+
+.details {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photos {
+  position: relative;
+  margin: 0 auto;
+  width: 20vw;
+  height: 20vw;
+}
+
+.photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-one {
+  @include bg-cover;
+
+  background-image: url('../img/project-1.jpg');
+}
+
+.photo-two {
+  @include bg-cover;
+
+  background-image: url('../img/project-2.jpg');
+}
+
+.photo-three {
+  @include bg-cover;
+
+  background-image: url('../img/project-3.jpg');
+}

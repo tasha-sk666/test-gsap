@@ -1,0 +1,63 @@
+.hero {
+  @include flex-all-center;
+
+  padding-top: 98px;
+  padding-bottom: 63px;
+  height: var(--vh);
+  max-height: 1020px;
+
+  &::before,
+  &::after {
+    @include bg-cover;
+
+    content: "";
+    position: absolute;
+    z-index: 20;
+    width: 500px;
+    height: 500px;
+  }
+
+  &::before {
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/bg-circle.png");
+    animation: float 7s ease-in-out infinite;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    background-image: url("../img/bg-circle.png");
+    animation: float 6s ease-in-out infinite;
+  }
+
+  &__container {
+    @include flex-all-center;
+
+    position: relative;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+    max-width: 1010px;
+    font-size: 60px;
+  }
+
+  &__text {
+    max-width: 583px;
+  }
+
+  &__inner {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    transform: translateX(-50%);
+  }
+}

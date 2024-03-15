@@ -1,0 +1,21 @@
+@import "mixins";
+
+:root {
+  --font-family: "Nunito", sans-serif;
+  --sub-font: "Syne", sans-serif;
+  --content-width: 1200px;
+  --container-offset: 40px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --section-padding: 60px;
+  --light-color: #fff;
+  --grey-color: #7c7c7c;
+  --dark-color: #030211;
+  --transition: 0.5s cubic-bezier(0.2, 0.6, 0, 1);
+}
+
+// @include tablet {
+//   :root {
+//     --container-offset: 20px;
+//     --fluid-container-offset: 20px;
+//   }
+// }

@@ -1,0 +1,130 @@
+.project {
+  padding-top: 71px;
+  padding-bottom: 71px;
+
+  &__container {
+    max-width: 920px;
+  }
+
+  &__title {
+    margin-bottom: 102px;
+  }
+
+  &__list {
+    display: grid;
+    column-gap: clamp(50px, 10vw, 200px);
+    justify-content: center;
+    grid-template-columns: repeat(2, 406px);
+    row-gap: 75px;
+  }
+
+  &__item {
+    &:nth-child(2n) {
+      transform: translateY(118px);
+    }
+
+    &:last-child {
+      transform: translateY(0);
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    height: 100%;
+    color: var(--light-color);
+
+    &--all {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 553px;
+
+    img {
+      height: 150%;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    font-family: var(--sub-font);
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__link-text {
+    @include flex-all-center;
+    @include bg-cover;
+
+    position: relative;
+    font-size: 30px;
+    color: var(--dark-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 220px;
+      height: 220px;
+      background-image: url("../../img/svg/bg-link.svg");
+      animation: 10s linear infinite rotation;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    right: -56px;
+    top: 149px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 112px;
+    height: 112px;
+    background-color: var(--dark-color);
+
+    .view {
+      display: block;
+      width: 80%;
+      height: 80%;
+      fill: var(--light-color);
+      object-fit: cover;
+      animation: 10s linear infinite rotation;
+    }
+
+    .arrow {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: block;
+      width: 21px;
+      height: 20px;
+      fill: var(--light-color);
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
